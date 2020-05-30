@@ -1,9 +1,9 @@
 #include <iostream>
 using namespace std;
 
-int main ()
+void Convert()
 {
-    cout << endl << "[   1 for metric ==> imperial   ]              [   2 for US customary ==> metric   ]\n\n";
+     cout << endl << "[   1 for metric ==> imperial   ]              [   2 for US customary ==> metric   ]\n\n";
     int UserInput;
     cin >> UserInput;
     cout << endl;
@@ -174,6 +174,7 @@ int main ()
             else
             {cout << "Equals: " << Temp +  273.15;} 
         }
+        
     }
     
     
@@ -197,6 +198,29 @@ int main ()
         
     }
     
+}
+
+int main ()
+{
+    int i = 1;
+    while(i >= 1 )
+    {
+        Convert();
+        cout << "\n\n[   1 to convert more   ]          [   2 to stop converting   ]" <<endl;
+        int Decision;
+        cin >> Decision;
+        if (Decision == 1)
+        {
+            ++i;
+        }
+        else
+        {
+            i = 0;
+        }
+        
+        
+    }
+
     cout << endl;
     system("pause");
     return 0;
